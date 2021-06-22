@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
+body{
+    font-family: 'Newsreader', serif;
+}
+#mainTitle{
+    text-align: center;
+    font-size:x-large;
+    font-weight: bolder;
+    background-color: gold;
+    margin-top: 2% ;
+    padding: 2%;
+}
+#mainDiv{
+    margin: 1% auto 1% auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column  ;
+    background-color: rgba(173, 115, 28, 0.178);
+    width: 40em;
+    border-radius: 9px;
+}
+.templateDiv{
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    flex-wrap:nowrap;
+    background-color: burlywood;
+    border: 2px solid chocolate;
+    border-radius: 4px;
+    padding: 2% 2% 2% 1%;
+    align-self: center;
+}
+.title{
+    font-weight: bolder;
+    margin: 1% 0% 1% 1%;
+}
+
+.author {
+    margin: 0% 0% 3% 3%;
+} 
+.buttonDiv{
+    display: flex;
+    justify-content: flex-end;
+}
+.button{
+    display: block;
+    width: fit-content;
+}
