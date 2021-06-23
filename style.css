@@ -1,48 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
 body{
     font-family: 'Newsreader', serif;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+#parentDiv{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
 }
 #mainTitle{
     text-align: center;
     font-size:x-large;
     font-weight: bolder;
-    background-color: gold;
+    background: linear-gradient(#7416a0, #ffffff);
     margin-top: 2% ;
     padding: 2%;
+    border-radius: 9px;
+    border:2px solid rgb(0, 0, 0);
+    margin: 2% 2% auto 2%;
+
 }
+#guardianDiv {
+    margin: 1% auto 1% auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column  ;
+    background-color: rgba(202, 167, 113, 0.288);
+    width: 30%;
+    border: black solid 3px;
+    border-radius: 9px;
+    height: fit-content;
+} 
+
+#guardianTitle , #mainDivTitle  {
+    text-align: center;
+    margin-top: 2%;
+    text-decoration: underline;
+    font-size: x-large;
+
+}
+
+
 #mainDiv{
     margin: 1% auto 1% auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column  ;
-    background-color: rgba(173, 115, 28, 0.178);
-    width: 40em;
+    background-color: rgba(173, 86, 28, 0.308);
+    width: 60%;
+    border: black solid 3px;
     border-radius: 9px;
 }
+
 .templateDiv{
     display: flex;
     flex-direction: column;
-    margin: 5%;
+    margin: 2%;
     flex-wrap:nowrap;
-    background-color: burlywood;
-    border: 2px solid chocolate;
+    background-color: rgb(151, 135, 222);
+    border: 2px solid rgb(93, 0, 121);
     border-radius: 4px;
     padding: 2% 2% 2% 1%;
     align-self: center;
 }
+
+.templateDiv:hover {
+    transform: scale(1.05);
+
+}
+
+
 .title{
     font-weight: bolder;
     margin: 1% 0% 1% 1%;
 }
 
-.author {
+
+
+.sName , .author {
     margin: 0% 0% 3% 3%;
 } 
 .buttonDiv{
     display: flex;
     justify-content: flex-end;
 }
-.button{
-    display: block;
-    width: fit-content;
+.button {
+    padding: 5px 5px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #790866;
+    border: black solid 1px;
+    border-radius: 15px;
+    box-shadow: 0 4px #999;
+  }
+  
+  .button:hover {background-color: #ffffff;
+    color: #790866;
 }
+  
+  .button:active {
+    background-color: #795375;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
