@@ -1,22 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader&display=swap');
 body{
     font-family: 'Newsreader', serif;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    background-color: rgba(69, 109, 42, 0.5);
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 #parentDiv{
     display: flex;
     justify-content: space-between;
@@ -27,7 +14,7 @@ body{
     text-align: center;
     font-size:x-large;
     font-weight: bolder;
-    background: linear-gradient(#b241e6, #514fbe);
+    background:rgba(201, 108, 46, 0.192);
     margin-top: 2% ;
     padding: 2%;
     border-radius: 9px;
@@ -52,16 +39,14 @@ body{
     margin-top: 2%;
     text-decoration: underline;
     font-size: x-large;
-
 }
-
 
 #mainDiv{
     margin: 1% auto 1% auto;
     display: flex;
     justify-content: flex-start;
     flex-direction: column  ;
-    background-color: rgba(173, 86, 28, 0.308);
+    background-color: rgba(216, 86, 0, 0.308);
     width: 60%;
     border: black solid 3px;
     border-radius: 9px;
@@ -72,8 +57,8 @@ body{
     flex-direction: column;
     margin: 2%;
     flex-wrap:nowrap;
-    background-color: rgb(151, 135, 222);
-    border: 2px solid rgb(93, 0, 121);
+    background-color: rgba(157, 158, 157, 0.411);
+    border: 1px solid rgb(7, 7, 7);
     border-radius: 4px;
     padding: 2% 2% 2% 1%;
     align-self: center;
@@ -82,16 +67,12 @@ body{
 
 .templateDiv:hover {
     transform: scale(1.05);
-
 }
-
 
 .title{
     font-weight: bolder;
     margin: 1% 0% 1% 1%;
 }
-
-
 
 .sName , .author {
     margin: 0% 0% 3% 3%;
@@ -107,7 +88,7 @@ body{
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #790866;
+    background-color: #530b47bd;
     border: black solid 1px;
     border-radius: 15px;
     box-shadow: 0 4px #999;

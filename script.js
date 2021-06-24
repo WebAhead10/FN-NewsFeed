@@ -8,18 +8,18 @@ let data = fetch('https://content.guardianapis.com/search?api-key=3f951de6-51a6-
             // managing the side news api using for loop for each news object from json file  
             for (let i = 0; i < results.length; i++) {
                 //creating a new div template for each article + added class name from css 
-                var newDiv = document.createElement('div');
-                newDiv.classList = 'templateDiv';
+                var newArticle = document.createElement('div');
+                newArticle.classList = 'templateDiv';
                 // creating a new title div 
-                var newDivTitle = document.createElement('div');
-                newDivTitle.classList = 'title'
-                newDivTitle.textContent = results[i].webTitle;// gave the title div the proper title from the json file we fetched
-                newDiv.appendChild(newDivTitle);// append the title to the template div***
+                var newArticleTitle = document.createElement('div');
+                newArticleTitle.classList = 'title'
+                newArticleTitle.textContent = results[i].webTitle;// gave the title div the proper title from the json file we fetched
+                newArticle.appendChild(newArticleTitle);// append the title to the template div***
                 // creating a new section div +added class name for css
-                var newDivSName = document.createElement('div');
-                newDivSName.classList = 'sName'
-                newDivSName.textContent = "Section: ".concat(results[i].sectionName);// gave the section name the proper text from json file
-                newDiv.appendChild(newDivSName);// append section div to the template div****
+                var newArticleSName = document.createElement('div');
+                newArticleSName.classList = 'sName'
+                newArticleSName.textContent = "Section: ".concat(results[i].sectionName);// gave the section name the proper text from json file
+                newArticle.appendChild(newArticleSName);// append section div to the template div****
                 // create a new button for the source of the article + added class name from css 
                 var button = document.createElement('button');
                 button.classList = 'button';
@@ -32,9 +32,17 @@ let data = fetch('https://content.guardianapis.com/search?api-key=3f951de6-51a6-
                 var buttonDiv = document.createElement('div');
                 buttonDiv.classList = 'buttonDiv';
                 buttonDiv.appendChild(button);
-                newDiv.appendChild(buttonDiv);// append the buttonDiv to the template div****
-                guardianDiv.appendChild(newDiv); // finished with the template div and appendd it to the guardianDiv***********
+                newArticle.appendChild(buttonDiv);// append the buttonDiv to the template div****
+                guardianDiv.appendChild(newArticle); // finished with the template div and appendd it to the guardianDiv***********
                 }
+            })  
+            .catch(error => {
+                console.log(error);
+                if (error.message === "404") {
+                    alert("⚠️ the side News page was not found");
+                  } else {
+                   alert("⚠️ Something went wrong");
+                  }
             });
 
 
@@ -47,23 +55,23 @@ let data2 = fetch('https://newsapi.org/v2/everything?q=Apple&from=2021-06-23&sor
         // managing the side news api using for loop for each news object from json file
         for (let i = 0; i < results.length; i++) {
             //creating a new div template for each article + added class name from css 
-            var newDiv = document.createElement('div');
-            newDiv.classList = 'templateDiv';
+            var newArticle = document.createElement('div');
+            newArticle.classList = 'templateDiv';
             // creating a new title div 
-            var newDivTitle = document.createElement('div');
-            newDivTitle.classList = 'title'
-            newDivTitle.textContent = results[i].title;// gave the title div the proper title from the json file we fetched
-            newDiv.appendChild(newDivTitle);// append the title to the template div***
+            var newArticleTitle = document.createElement('div');
+            newArticleTitle.classList = 'title'
+            newArticleTitle.textContent = results[i].title;// gave the title div the proper title from the json file we fetched
+            newArticle.appendChild(newArticleTitle);// append the title to the template div***
             // creating a new auther div +added class name for css
             var newAuthor = document.createElement('div');
             newAuthor.classList = 'author'
             newAuthor.textContent = results[i].author;// gave the auther div the proper auther from the json file we fetched
-            newDiv.appendChild(newAuthor);// append autherDiv to the template div 
+            newArticle.appendChild(newAuthor);// append autherDiv to the template div 
             // create a new content div 
-            var newDivContent = document.createElement('div');
-            newDivContent.classList = 'content'
-            newDivContent.textContent = results[i].description;// gave the content name the proper text from json file
-            newDiv.appendChild(newDivContent);// append content div to the template div****
+            var newArticleContent = document.createElement('div');
+            newArticleContent.classList = 'content'
+            newArticleContent.textContent = results[i].description;// gave the content name the proper text from json file
+            newArticle.appendChild(newArticleContent);// append content div to the template div****
             // create a new button for the source of the article + added class name from css 
             var button = document.createElement('button');
             button.classList = 'button';
@@ -76,9 +84,17 @@ let data2 = fetch('https://newsapi.org/v2/everything?q=Apple&from=2021-06-23&sor
             var buttonDiv = document.createElement('div');
             buttonDiv.classList = 'buttonDiv';
             buttonDiv.appendChild(button);
-            newDiv.appendChild(buttonDiv);// append the buttonDiv to the template div****
-            mainDiv.appendChild(newDiv);// finished with the template div and appendd it to the mainDiv***********
+            newArticle.appendChild(buttonDiv);// append the buttonDiv to the template div****
+            mainDiv.appendChild(newArticle);// finished with the template div and appendd it to the mainDiv***********
             }
+        })
+        .catch(error => {
+            console.log(error);
+            if (error.message === "404") {
+                alert("⚠️ the main page was not found");
+              } else {
+               alert("⚠️ Something went wrong");
+              }
         });
     
 
